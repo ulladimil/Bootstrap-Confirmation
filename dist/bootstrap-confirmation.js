@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Confirmation (v4.0.1)
+ * Bootstrap Confirmation (v4.0.2)
  * @copyright 2013 Nimit Suwannagate <ethaizone@hotmail.com>
  * @copyright 2014-2018 Damien "Mistic" Sorel <contact@git.strangeplanet.fr>
  * @licence Apache License, Version 2.0
@@ -378,6 +378,7 @@
                 return $(this).data(DATA_KEY) !== undefined;
               }).confirmation('hide');
               $('body').off(Event.SHOWN + "." + self.uid);
+              $('body').off(Event.CLICK + "." + self.uid);
               self.eventBody = false;
             });
           }
