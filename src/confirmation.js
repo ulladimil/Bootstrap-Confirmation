@@ -304,7 +304,6 @@ class Confirmation extends Popover {
               return $(this).data(DATA_KEY) !== undefined;
             }).confirmation('hide');
 
-            $('body').off(`${Event.SHOWN}.${self.uid}`);
             $('body').off(`${Event.CLICK}.${self.uid}`);
             self.eventBody = false;
           });
