@@ -223,6 +223,8 @@ class Confirmation extends Popover {
   }
 
   dispose() {
+    $('body').off(`${Event.CLICK}.${this.uid}`);
+    this.eventBody = false;
     this._cleanKeyupEvent();
     super.dispose();
   }
